@@ -1,3 +1,9 @@
+const path = require('path')
+
 module.exports = {
-  reactStrictMode: true,
+  // reactStrictMode: true,
+  ignoreDuringBuilds: true,
+  images: {
+      domains: ['res.cloudinary.com'],
+  }
 }

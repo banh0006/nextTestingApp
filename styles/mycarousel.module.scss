@@ -1,0 +1,55 @@
+@import './globals.scss';
+
+%button {
+    color: #fff;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.embla {
+    overflow: hidden;
+    position: relative;
+}
+
+.viewport {
+    position: relative;
+}
+
+.container {
+    display: flex;
+}
+
+.slide {
+    height: 499px;
+    position: relative;
+    flex: 0 0 100%;
+
+    @media ($below-small) {
+        height: 236px;
+
+        > img {
+            content: url('/assets/images/mobile-banner.jpeg');
+        }
+    }
+
+    @media ($above-small) and ($below-lg) {
+        height: 285px;
+    }
+}
+
+.pre_button {
+    @extend %button;
+    left: 2%;
+}
+
+.next_button {
+    @extend %button;
+    right: 2%;
+}

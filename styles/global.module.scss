@@ -1,0 +1,32 @@
+@import './globals';
+
+.main_container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper_container {
+    width: 100%;
+    // overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media ($above-small) {
+        width: 750px;
+    }
+
+    @media ($above-md) {
+        width: 970px;
+    }
+
+    @media ($above-small) and ($below-lg) {
+        width: 100%;
+    }
+
+    @media ($above-lg) {
+        width: 1170px;
+    }
+}

@@ -1,0 +1,28 @@
+// -------------------------------- global variables ------------------------------
+// break points
+// $xs: '600px';
+$md: '900px';
+$lg: '1200px';
+$xl: '1536px';
+
+// $above-xs: 'min-width: #{$xs}';
+$above-md: 'min-width: #{$md}';
+$above-lg: 'min-width: #{$lg}';
+$above-xl: 'min-with: #{$xl}';
+$above-small: 'min-width: 768px';
+$below-small: 'max-width: 768px';
+
+$below-lg: 'max-width: #{$lg}';
+// ----------------------------------- mixins --------------------------------------
+
+// ----------------------------------- placeholders -------------------------------
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%no-padding-x {
+    padding-left: 0;
+    padding-right: 0;
+}

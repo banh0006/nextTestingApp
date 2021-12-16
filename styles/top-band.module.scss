@@ -1,0 +1,15 @@
+@import './globals';
+
+.top_red_band {
+    display: none;
+    padding: 7px 0;
+
+    @media ($above-small) {
+        display: block;
+        background-color: #d81e2b;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        font-family: HelveticaNeue-Light;
+    }
+}

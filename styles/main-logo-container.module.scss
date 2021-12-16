@@ -1,0 +1,160 @@
+@import './globals.scss';
+
+.container {
+    padding-bottom: 10px;
+    padding-top: 0;
+    height: auto;
+
+    @media ($above-lg) {
+        padding-bottom: 25px;
+    }
+
+    > div {
+        // logo div
+        > div:first-child {
+            padding-left: 0 !important;
+            padding: 0;
+            margin-top: 10px;
+
+            @media ($above-small) and ($below-lg) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.default_logo {
+    @media ($below-lg) {
+        padding-left: 40px !important;
+    }
+
+    > img {
+        width: 150px;
+        vertical-align: middle;
+
+        @media ($above-small) and ($below-lg) {
+            width: 270px;
+        }
+
+        @media ($above-lg) {
+            width: auto;
+        }
+    }
+}
+
+.menu_resp {
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    z-index: 1;
+    cursor: pointer;
+    background: url(/assets/images/menu_mobile.jpeg) no-repeat;
+    width: 20px;
+    height: 20px;
+
+    @media ($above-small) and ($below-lg) {
+        width: 30px;
+        height: 40px;
+        background-size: 36px;
+    }
+
+    @media ($above-lg) {
+        display: none;
+    }
+
+    > a {
+        position: cursor;
+    }
+}
+
+.search__div {
+    order: 3;
+    margin-top: 10px !important;
+    @media ($above-lg) {
+        order: 2;
+        margin-top: 24px !important;
+    }
+}
+
+.search_input {
+    input {
+        font-size: 12px;
+        font-weight: bold;
+
+        @media ($above-small) {
+            font-size: 14px;
+        }
+    }
+}
+
+.search_icon {
+    font-size: 1.5rem;
+
+    @media ($above_small) {
+        font-size: 2rem;
+    }
+}
+
+.right_menu__div {
+    order: 2;
+
+    margin-top: 5px !important;
+    padding-right: 0;
+
+    @media ($above-small) and ($below-lg) {
+        margin-top: 10px !important;
+        padding-left: 0 !important;
+    }
+    @media ($above-lg) {
+        order: 3;
+        margin-top: 28px !important;
+    }
+}
+
+.right_menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+
+    li {
+        position: relative;
+        border-right: 1px dotted #000;
+        padding-right: 10px;
+        padding-left: 3px;
+
+        &:first-child,
+        &:nth-child(2) {
+            display: none;
+
+            @media ($above-small) {
+                display: block;
+            }
+        }
+
+        &:last-child {
+            border-right: none;
+            padding-right: none;
+        }
+
+        img {
+            height: 35px;
+
+            @media ($above-small) {
+                height: 40px;
+            }
+        }
+
+        > span {
+            position: absolute;
+            right: 7px;
+            bottom: 0;
+            color: #d81e2b;
+            font-weight: 700;
+            font-family: Helvetica-Bold;
+            background-image: url(https://images.canadawheels.ca/images/down-arrow.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+    }
+}
