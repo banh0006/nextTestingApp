@@ -34,7 +34,6 @@ export const cartSlice = createSlice({
             prepare: (product) => {
                 const currentCartItems = getItemsOnCookie()
                 const isExisting = checkIsExisting(currentCartItems, product)
-                console.log(product)
 
                 if (isExisting) {
                     return {type: 'default'}
